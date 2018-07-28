@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee1" class="com.capgemini.spring.lab1_4.Employee">
+		<constructor-arg value="101" />
+		<constructor-arg value="Rama" />
+		<constructor-arg value="12345.67" />
+	</bean>
+
+	<bean id="employee2" class="com.capgemini.spring.lab1_4.Employee">
+		<constructor-arg value="102" />
+		<constructor-arg value="Harriet" />
+		<constructor-arg value="12345.67" />
+	</bean>
+
+	<bean id="employee3" class="com.capgemini.spring.lab1_4.Employee">
+		<constructor-arg value="103" />
+		<constructor-arg value="Harriet" />
+		<constructor-arg value="12345.67" />
+	</bean>
+
+	<bean id="employee4" class="com.capgemini.spring.lab1_4.Employee">
+		<constructor-arg value="104" />
+		<constructor-arg value="Harriet" />
+		<constructor-arg value="12345.67" />
+	</bean>
+
+	<bean id="employee5" class="com.capgemini.spring.lab1_4.Employee">
+		<constructor-arg value="105" />
+		<constructor-arg value="Harriet" />
+		<constructor-arg value="12345.67" />
+	</bean>
+
+	<bean id="employeeService" class="com.capgemini.spring.lab1_4.EmployeeService">
+		<property name="hmap">
+			<map>
+				<entry key="100" value-ref="employee1"></entry>
+				<entry key="101" value-ref="employee2"></entry>
+				<entry key="102" value-ref="employee3"></entry>
+				<entry key="103" value-ref="employee4"></entry>
+				<entry key="104" value-ref="employee5"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>
